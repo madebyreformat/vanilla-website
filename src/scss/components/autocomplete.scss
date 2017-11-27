@@ -1,0 +1,46 @@
+.name-search-wrap {
+	
+	.no-items {
+		display:none;
+		position:absolute;
+		padding:5px;
+		margin:0;
+		background-color:$white;
+		text-transform:initial;
+		color:#666;
+		width:100%;
+	}
+
+	.ui-autocomplete {
+		position:absolute !important;
+		z-index:100;
+		padding:0;
+		margin:0;
+		background-color:$white;
+		text-transform:initial;
+		list-style-type: none;
+	}
+
+	.ui-menu-item {
+		padding:5px;
+		color:#666;
+		transition:all 250ms $easing;
+		a {
+			color:#666;
+			text-decoration:none;
+		}
+	}
+
+	.ui-state-highlight {
+		text-decoration: underline;
+	}
+
+	.ui-state-focus {
+		background-color:#ccc;
+		color:$black;
+		a {
+			color:$black;
+		}
+	}
+
+}

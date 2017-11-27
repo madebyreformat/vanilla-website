@@ -1,0 +1,68 @@
+
+.filter {
+	@include container;
+	.filter-item {
+		@include breakpoint($xlrg){
+			@include gallery(3);
+		}
+	}
+}
+
+.filter-no-tn {
+	.thumblist-img {
+		display: none;
+	}
+}
+
+.sidebar {
+	@include breakpoint($xlrg){
+		@include span(3 no-gutter);
+	}
+}
+
+.touch {
+	.sidebar {
+		display: none;
+	}
+}
+
+.grid-wrap {
+	@include breakpoint($xlrg){
+		width: span(9) + gutter();
+		transform:translateX( gutter()/2 );
+		float:right;
+	}
+
+	min-height:100vh;
+}
+
+.grid {
+	@include clearfix;
+
+}
+
+.people-item {
+	@include breakpoint($med){
+		@include span(3 of 12);
+	}
+	@include breakpoint($xlrg){
+		@include span(3 of 9 split);
+	}
+	// @include span(3 of 9);
+	background-color: rgba(0,0,0,0.25); 
+	
+	img {
+		max-width:100%;
+	}
+}
+
+.thumblist-name {
+	span {
+		display: block;
+		&.meta {
+			span {
+				display: inline-block;
+			}
+		}
+	}
+}

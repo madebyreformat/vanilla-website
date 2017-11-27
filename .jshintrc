@@ -1,0 +1,26 @@
+{
+    "bitwise": true,
+    "eqeqeq": true,
+    "eqnull": true,
+    "immed": true,
+    "newcap": true,
+    "esnext": true,
+    "camelcase": false,
+    "latedef": true,
+    "noarg": true,
+    "node": true,
+    "undef": true,
+    "browser": true,
+    "trailing": true,
+    "jquery": true,
+    "curly": true,
+    "supernew": true,
+    "globals": {
+        "google": true,
+        "Modernizr": true,
+        "_": true,
+        "jQuery": true,
+        "Waypoint" : true,
+        "WOW" : true
+    }
+}

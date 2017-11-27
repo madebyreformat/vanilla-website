@@ -1,0 +1,61 @@
+{
+    "key": "group_591c33abbf0bb",
+    "title": "Options - Contact - Google Map",
+    "fields": [
+        {
+            "key": "field_591c31cd29d67",
+            "label": "Google Map",
+            "name": "map",
+            "type": "google_map",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "center_lat": "",
+            "center_lng": "",
+            "zoom": "",
+            "height": ""
+        },
+        {
+            "key": "field_591c3291cf647",
+            "label": "Google Map Styling Code",
+            "name": "map_style_code",
+            "type": "textarea",
+            "instructions": "(optional) for adding customisation code",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-contact"
+            }
+        ]
+    ],
+    "menu_order": 54,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1495030770
+}

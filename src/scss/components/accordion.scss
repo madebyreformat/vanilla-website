@@ -1,0 +1,227 @@
+/*
+*
+* Accordion module
+*****************************************************************************
+*
+* Optional:
+* .left-arrow : add to .accordion-item to make arrow point left rather than up
+*
+*****************************************************************************/
+
+$ac1-header-background-color: 	$black;
+$ac1-header-background-hover:   #666;
+$ac1-header-foreground-color: 	$white;
+$ac1-header-arrow-color: 		$ac1-header-foreground-color;
+$ac1-header-padding:			0.5em;
+$ac1-drop-border:				0;
+$ac1-drop-padding:				rhythm() 0;
+$ac1-accordion-margin-after: 	rhythm(.5);
+$ac1-separator: 				5px solid $black;
+$ac1-separator-margin: 			rhythm();
+$ac1-border-radius: 			3px;
+
+.accordion,
+.small-accordion {
+	margin-bottom:$ac1-accordion-margin-after;
+
+	hr {
+		margin:$ac1-separator-margin 0;
+		border:0;
+		height:0;
+		border-top:$ac1-separator;
+	}
+
+	.button-item {
+		display: block;
+		background-color: $ac1-header-background-color;
+		color:$ac1-header-foreground-color;
+		padding:$ac1-header-padding;
+		transition:all 250ms;
+		position:relative;
+		cursor:pointer;
+		text-decoration:none;
+		border-radius:$ac1-border-radius;
+		&:hover {
+			background-color: $ac1-header-background-hover;
+		}
+	}
+
+	.accordion-item {
+		margin-bottom:$ac1-accordion-margin-after;
+		&:last-of-type {
+			margin-bottom:0;
+		}
+
+		.header {
+			display: block;
+			background-color: $ac1-header-background-color;
+			color:$ac1-header-foreground-color;
+			padding:$ac1-header-padding;
+			transition:all 250ms;
+			position:relative;
+			cursor:pointer;
+			font-size: $font-small;
+			font-weight: normal;
+			border-radius:$ac1-border-radius;
+
+			&:hover {
+				background-color: $ac1-header-background-hover;
+			}
+
+			&:after {
+				content:"";
+				display: block;
+				width:rhythm(.5);
+				height:rhythm(.5);
+				transform-origin:center center;
+				transform:translateY(-25%) rotate(45deg);
+				position:absolute;
+				display:block;
+				transition:all 250ms $easing;
+				top:50%;
+				border-top:1px solid $ac1-header-arrow-color;
+				border-left:1px solid $ac1-header-arrow-color;
+				right:$ac1-header-padding*2;
+				z-index:2;
+			}
+			
+		}
+		&.active {
+			.header {
+				&:after {
+					transform:translateY(-75%) rotate(-135deg);
+				}
+			}
+		}
+
+		&.left-arrow {
+			.header {
+				&:after {
+					transform:translate(50%,-50%) rotate(-45deg);
+				}
+			}
+			&.active {
+				.header {
+					&:after {
+						transform:translate(0,-75%) rotate(-135deg);
+					}
+				}
+			}
+		}
+
+		.drop {
+			display: none;
+			border:$ac1-drop-border;
+			padding:$ac1-drop-padding;
+		}
+
+	}
+}
+
+
+$ac2-header-foreground-color: 	$black;
+$ac2-header-foreground-hover:   #666;
+$ac2-header-arrow-color: 		$ac2-header-foreground-color;
+$ac2-header-border:				1px solid $black;
+$ac2-header-padding:			5px;
+$ac2-drop-border:				0;
+$ac2-drop-padding:				rhythm() 5px;
+$ac2-accordion-margin-after: 	10px;
+
+.accordion-alt {
+	margin-bottom:$ac2-accordion-margin-after;
+	
+	.accordion-item {
+		margin-bottom:$ac2-accordion-margin-after;
+		&:last-of-type {
+			margin-bottom:0;
+		}
+		
+		.header {
+			display: block;
+			color:$ac2-header-foreground-color;
+			padding:$ac2-header-padding;
+			transition:all 250ms;
+			position:relative;
+			cursor:pointer;
+			border-bottom:$ac2-header-border;
+			&:hover {
+				color: $ac2-header-foreground-hover;
+			}
+
+			&:after {
+				content:"";
+				display: block;
+				width:rhythm(.5);
+				height:rhythm(.5);
+				transform-origin:center center;
+				transform:translateY(-25%) rotate(45deg);
+				position:absolute;
+				display:block;
+				transition:all 250ms $easing;
+				top:50%;
+				border-top:1px solid $ac2-header-arrow-color;
+				border-left:1px solid $ac2-header-arrow-color;
+				right:$ac2-header-padding*2;
+				z-index:2;
+			}
+			
+		}
+		&.active {
+			.header {
+				&:after {
+					transform:translateY(-75%) rotate(-135deg);
+				}
+			}
+		}
+
+		&.left-arrow {
+			.header {
+				&:after {
+					transform:translate(50%,-50%) rotate(-45deg);
+				}
+			}
+			&.active {
+				.header {
+					&:after {
+						transform:translate(0,-75%) rotate(-135deg);
+					}
+				}
+			}
+		}
+
+		.drop {
+			display: none;
+			border:$ac2-drop-border;
+			padding:$ac2-drop-padding;
+		}
+
+	}
+}
+
+.drop-content {
+	ul {
+		margin:0;
+		@include adjust-font-size-to($font-small);
+		li {
+			a,
+			span {
+				display: block;
+			}
+		}
+	}
+	p {
+		@include adjust-font-size-to($font-small);
+		margin-bottom:1em;
+		&:last-of-type {
+			margin-bottom:0;
+		}
+	}
+	a {
+		color:$black;
+		text-decoration:none;
+		&:hover {
+			color:red;
+		}
+	}
+}
