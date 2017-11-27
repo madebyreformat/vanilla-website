@@ -4,6 +4,8 @@
 		endif;
 		?>
 
+        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer Widgets") ) : ?><?php endif;?>
+
 		<nav class="social-links">
             <ul>
                 <?php while( have_rows('social_links','options') ): the_row(); ?>

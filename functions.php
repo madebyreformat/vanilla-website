@@ -57,6 +57,15 @@ function setup() {
     'footer_navigation' => __('Footer Navigation', $package['namespace'])
   ]);
 
+  register_sidebar(array(
+    'name' => 'Footer Widgets',
+    'id'            => 'footer-widget',
+    'before_widget' => '<section class = "widget">',
+    'after_widget' => '</section>',
+    'before_title' => '<header>',
+    'after_title' => '</header>',
+  ) );
+
   // Enable post thumbnails
   // http://codex.wordpress.org/Post_Thumbnails
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
